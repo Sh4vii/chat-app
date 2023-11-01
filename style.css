@@ -1,0 +1,303 @@
+/**** Chat App Challange ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root {
+  --pale-violet: hsl(276, 100%, 81%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+  --moderate-violet: hsl(276, 55%, 52%);
+  --des-dark-violet: hsl(271, 15%, 43%);
+  --grayish-blue: hsl(206, 6%, 79%);
+  --vdes-dark-violet: hsl(271, 36%, 24%);
+  --dark-grayish-violet: hsl(270, 7%, 64%);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --gradient: linear-gradient(to right,rgb(228, 61, 250),rgb(136, 56, 255));
+  --gradient-2: linear-gradient(to bottom,rgb(228, 61, 250),rgb(136, 56, 255));
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.3s linear;
+}
+html {
+  overflow-x: hidden;
+  -scroll-behavior: smooth;
+  font-family: 'Rubik', sans-serif;
+}
+i{
+    color: white;
+}
+.hero{
+    position: relative;
+    display: flex;
+    flex-direction: row;   
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Light-Grayish-Violet);
+}
+.hero-image{
+    display: flex;
+    position: relative;
+    width: 45%;
+    height: 100vh;
+}
+.hero-image .background{
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width:70%;
+    height: 90vh;
+    background-image: var(--gradient-2);
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+}
+.phone-image{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: scale(0.8);
+}
+.phone{
+    display: flex;
+    position: relative;
+    max-width: 320px;
+    max-height: 800px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+}
+.phone .notch{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 30px;
+    left: 25%;
+    top: 0;
+    background-color: white;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.phone .screen{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 24px;
+    background-color: var(--Light-Grayish-Violet);
+}
+.phone .screen .chat-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 10px 15px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    background-image: linear-gradient(
+        to right,rgb(228, 61, 250),rgb(136, 56, 255));
+    margin-bottom: 10px;
+}
+.phone .screen .chat-info .profile-picture{
+    display: flex;
+    width: 40px;
+    border: 2px solid rgb(236, 235, 235);
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.phone .screen .chat-info .profile-picture img{
+    width: 100%;
+    border-radius: 30px;
+}
+.phone .screen .chat-info .info h3{
+    font-size: 14px;
+    color: white;
+    margin-bottom: 4px;
+}
+.phone .screen .chat-info .info p{
+    font-size: 10px;
+    color: white;
+}
+.menu{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.chat-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.chat-content .omega{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 75%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    font-size: 12px;
+}
+.chat-content .o-message{
+    color: var(--moderate-violet);
+}
+.chat-content .alpha{
+    display: flex;
+    margin-left: auto;
+    padding: 10px;
+    width: 75%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    font-size: 12px;
+}
+.chat-content .a-message{
+    color: var(--des-dark-violet);
+
+}
+.chat-content .media{
+    width: 75%;
+    margin-left: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: space-between;  
+}
+.chat-content .media .img{
+    display: flex;
+    width: 50px;
+}
+.chat-content .media .img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.chat-content .plan{
+    justify-content: space-between;
+    background-image: var(--gradient);
+    color: white;
+}
+.chat-content .plan input{
+    margin-right: 15px;
+    background-color: transparent;
+}
+.chat-content .plan h2{
+    margin-left: auto;
+    font-weight: 700;
+}
+.content{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 55%;
+    justify-content: center;
+    padding: 0 0 0 60px;
+}
+.background2{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -150px;
+    width:450px;
+    height: 80vh;
+    background-color: rgba(228, 228, 228, 0.295);
+    border-top-left-radius: 15rem;
+    border-top-right-radius: 15rem;
+    
+}
+.content h1{
+    font-weight: 700;
+    color: var(--vdes-dark-violet);
+    margin-bottom: 20px;
+    z-index: 10;
+}
+.content p{
+    font-size: 16px;
+    color: var(--dark-grayish-violet);
+    width: 60%;
+    z-index: 10;
+    text-align: justify;
+    line-height: 30px
+}
+.message-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 4px;
+    border-radius: 25px;
+    margin: 10px;
+}
+.message-box input{
+    font-size: 12px;
+    color: var(--des-dark-violet);
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+.message-box button{
+    border-radius: 25px;
+    background-color: var(--vdes-dark-violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 4px;
+    color: white;
+    margin-left: auto;
+    height: 30px;
+    width: 30px;
+}
+
+@media (max-width: 900px){
+    .phone-image{
+        left: 0;  
+    }
+
+    .background2{
+        display: none;    
+    }
+}
+
+@media (max-width: 450px) {
+    .hero{
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+    .hero-image{
+        display: block;
+        width: 100%;
+        min-height: 650px;
+    }
+    .hero-image .background{
+        left: -25%;
+        height: 500px;
+    }
+    .phone-image{
+        width: 80%;
+        left: 35px;
+    }
+    .content{
+        position: relative;
+        width: 100%;
+        padding: 20px 10px;
+        align-items: center;
+    }
+    .content h1{
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .content p{
+        text-align: justify;
+        width: 80%;
+    }
+   
+    .background2{
+        display: none;
+    }
+}
